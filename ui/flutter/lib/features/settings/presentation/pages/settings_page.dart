@@ -24,6 +24,7 @@ import '../../../../shared/widgets/app_choice_segmented_control.dart';
 import '../../../../shared/widgets/app_loading_button.dart';
 import '../../../../shared/widgets/app_number_input.dart';
 import '../../../../shared/widgets/app_path_picker_field.dart';
+import '../../../../shared/widgets/app_text_field.dart';
 import '../../../../shared/widgets/app_tooltip.dart';
 import '../../../../shared/widgets/app_toast.dart';
 import '../../../../shared/widgets/responsive_menu_layout.dart';
@@ -1849,7 +1850,7 @@ class _TextSettingControl extends StatelessWidget {
     final desktop = MediaQuery.sizeOf(context).width >= Breakpoints.mobile;
     return SizedBox(
       width: desktop ? AppDesignTokens.settingsFormControlWidth : double.infinity,
-      child: shad.TextField(
+      child: AppTextField(
         key: fieldKey,
         controller: controller,
         hintText: hintText,
@@ -1919,7 +1920,7 @@ class _HostPortControl extends StatelessWidget {
       child: Row(
         children: [
           Expanded(
-            child: shad.TextField(
+            child: AppTextField(
               key: hostKey,
               controller: hostController,
               hintText: context.l10n.server,

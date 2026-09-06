@@ -2,6 +2,8 @@ import 'package:flutter/services.dart';
 import 'package:flutter/widgets.dart';
 import 'package:shadcn_flutter/shadcn_flutter.dart' as shad;
 
+import 'app_text_field.dart';
+
 /// A bounded numeric text field with the app's standard spinner controls.
 class AppNumberInput extends StatefulWidget {
   const AppNumberInput({
@@ -80,7 +82,7 @@ class _AppNumberInputState extends State<AppNumberInput> {
             FilteringTextInputFormatter.digitsOnly,
             _NumericalRangeFormatter(min: widget.min.toInt(), max: widget.max?.toInt()),
           ];
-    return shad.TextField(
+    return AppTextField(
       key: widget.fieldKey,
       controller: widget.controller,
       hintText: widget.hintText,
